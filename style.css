@@ -1,0 +1,109 @@
+:root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --accent: #38bdf8;
+    --text: #f8fafc;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+label { display: block; margin-top: 10px; font-weight: bold; color: var(--accent); }
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    background: #0f172a;
+    color: white;
+    box-sizing: border-box;
+}
+
+.emoji-bank {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+.emoji-bank button {
+    font-size: 1.8rem;
+    padding: 10px;
+    background: #334155;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.emoji-bank button:active { transform: scale(0.9); }
+
+.selected-members {
+    background: #0f172a;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+#emoji-display {
+    font-size: 2rem;
+    margin: 10px 0;
+    min-height: 40px;
+}
+
+.main-btn {
+    width: 100%;
+    padding: 18px;
+    background: var(--accent);
+    color: #0f172a;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.clear-btn {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.result-box {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid var(--accent);
+    border-radius: 16px;
+    background: #1e293b;
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
