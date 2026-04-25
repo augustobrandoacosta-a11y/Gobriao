@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gobriao</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>AI Music Maker</h1>
+            <p>Write your hit song and build your band!</p>
+        </header>
+
+        <div class="card">
+            <h3>Step 1: Song Details</h3>
+            <label for="description">Song Description</label>
+            <input type="text" id="description" placeholder="e.g. Fast aggressive phonk beat...">
+            
+            <label for="lyrics">Lyrics</label>
+            <textarea id="lyrics" rows="4" placeholder="Enter your lyrics here..."></textarea>
+        </div>
+
+        <div class="card">
+            <h3>Step 2: Song Members Emoji Lab</h3>
+            <p class="hint">Tap emojis to add band members (max 5)</p>
+            <div class="emoji-bank">
+                <button onclick="addEmoji('🎸')">🎸</button>
+                <button onclick="addEmoji('🥁')">🥁</button>
+                <button onclick="addEmoji('🎤')">🎤</button>
+                <button onclick="addEmoji('🎹')">🎹</button>
+                <button onclick="addEmoji('🎧')">🎧</button>
+                <button onclick="addEmoji('🎷')">🎷</button>
+                <button onclick="addEmoji('🔥')">🔥</button>
+                <button onclick="addEmoji('💀')">💀</button>
+            </div>
+            
+            <div class="selected-members">
+                <span>Band Members:</span>
+                <div id="emoji-display">None (Solo Artist)</div>
+                <button class="clear-btn" onclick="clearEmojis()">Reset Members</button>
+            </div>
+        </div>
+
+        <button class="main-btn" onclick="generateSong()">✨ Generate AI Song</button>
+
+        <div id="output-area"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
